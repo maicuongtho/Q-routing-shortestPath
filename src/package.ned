@@ -1,0 +1,3 @@
+package qlshortestpath;
+
+@license(LGPL);

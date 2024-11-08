@@ -1,0 +1,13 @@
+QlHC::QlHC()
+{
+    Ipv4Address addr;
+    L3Address addrL3;
+    for (int i=0; i<100; i++){
+        addr.set(172, 16, 1, 1+i);
+        addrL3.set(addr);
+        networkNodes[i] =addrL3;
+    }
+    qTable.Init(networkNodes);
+}
+
+Do vậy, khi mô phỏng cần qui định địa chỉ các nút từ 172.16.1.1 -->172.16.1.100
